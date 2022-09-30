@@ -9,9 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class ArchersController : ControllerBase
+    public class ArchersController : BaseApiController
     {
         private readonly DataContext _context;
         public ArchersController(DataContext context)

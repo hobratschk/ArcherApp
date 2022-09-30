@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'The Archer App';
   archers: any;
+  model: any;
 
   constructor(private http: HttpClient) {}
 
@@ -22,5 +22,9 @@ export class AppComponent implements OnInit {
     }, error => {
       console.log(error);
     })
+  }
+
+  addArcher() {
+    console.log(this.model);
   }
 }
