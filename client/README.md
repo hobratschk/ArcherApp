@@ -5,6 +5,8 @@ This app enables users to easily track and score archery competitions
 cd into API directory and run `dotnet run`
 cd into client directory and run `ng serve`
 
+head over to localhost:4200 - add archers, create scores for archers, then view the results under 'Distance Event'
+
 # Client
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.18.
