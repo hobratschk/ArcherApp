@@ -1,1 +1,8 @@
-<p>archers-list works!</p>
+<div class="row">
+    <div class="col-12">
+        <button class="btn btn-primary" routerLink="/addArcher">Add Archer</button>
+    </div>
+    <div class="col-4" >
+        <a *ngFor="let archer of archers" routerLink="archers/{{archer.id}}" class="list-group-item list-group-item-action px-3 border-0" style="margin-top: 15px">{{archer.firstName}} {{archer.lastName}}</a>
+    </div>
+</div>

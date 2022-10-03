@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IArcher } from '../../_models/archer';
+import { ArchersService } from '../../_services/archers.service';
 
 @Component({
   selector: 'app-archers-list',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./archers-list.component.css']
 })
 export class ArchersListComponent implements OnInit {
+  archers: IArcher[];
 
-  constructor() { }
+  constructor(private archersService: ArchersService) {}
 
   ngOnInit(): void {
+    this.loadArchers();
+  }
+
+  loadArchers() {
+    this.archersService.getArchers().subscribe(response => {
+      this.archers = response;
+    })
   }
 
 }

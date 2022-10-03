@@ -1,1 +1,109 @@
-<p>archer-details works!</p>
+<div class="row">
+    <div class="col-9">
+        <h1>{{archer.firstName}} {{archer.lastName}}</h1>
+    </div>
+    <div class="col-3">
+        <button class="btn btn-primary" (click)="deleteArcher(archer, scoreA)">Delete Archer and Scores</button>
+    </div>
+    <div class="col-3 score-form">
+        <form #scoreForm="ngForm" autocomplete="off" #editScoreAForm="ngForm" id="score-form" (ngSubmit)="scoreA.id === undefined ? addScoreA(scoreA, archer) : updateEventAScore(scoreA)">
+            <h4>Distance Event</h4>
+            <h6 class="label">Target 1</h6>
+            <input 
+              name="targetA"
+              [(ngModel)]="scoreA.targetA"
+              class="form-control me-2" 
+              type="number" 
+            >
+            <h6 class="label">Target 2</h6>
+            <input 
+              name="targetB"
+              [(ngModel)]="scoreA.targetB"
+              class="form-control me-2" 
+              type="number"  
+            >
+            <h6 class="label">Target 3</h6>
+            <input 
+              name="targetC"
+              label="hey"
+              [(ngModel)]="scoreA.targetC"
+              class="form-control me-2"
+              type="number" 
+            >
+            <h6 class="label">Target 4</h6>
+            <input 
+              name="targetD"
+              [(ngModel)]="scoreA.targetD"
+              class="form-control me-2"
+              type="number" 
+            >
+            <h6 class="label">Target 5</h6>
+            <input 
+              name="targetE"
+              [(ngModel)]="scoreA.targetE"
+              class="form-control me-2"
+              type="number" 
+            >
+            <h6 class="label">Target 6</h6>
+            <input 
+              name="targetF"
+              [(ngModel)]="scoreA.targetF"
+              class="form-control me-2"
+              type="number" 
+            >
+            <button class="btn btn-outline-success save-btn" type="submit">Save Distance Scores</button>
+        </form>
+    </div>
+    <div class="col-2">
+    </div>
+    <!-- <div class="col-3 score-form">
+        <form autocomplete="off" #editScoreBForm="ngForm" id="editScoreBForm">
+            <h4>Speed Event</h4>
+            <h6 class="label">Target 1</h6>
+            <input 
+              name="targetA"
+              [(ngModel)]="scoreB.targetA"
+              class="form-control me-2" 
+              type="number" 
+            >
+            <h6 class="label">Target 2</h6>
+            <input 
+              name="targetB"
+              [(ngModel)]="scoreB.targetB"
+              class="form-control me-2" 
+              type="number"  
+            >
+            <h6 class="label">Target 3</h6>
+            <input 
+              name="targetC"
+              label="hey"
+              [(ngModel)]="scoreB.targetC"
+              class="form-control me-2"
+              type="number" 
+            >
+            <h6 class="label">Target 4</h6>
+            <input 
+              name="targetD"
+              [(ngModel)]="scoreB.targetD"
+              class="form-control me-2"
+              type="number" 
+            >
+            <h6 class="label">Target 5</h6>
+            <input 
+              name="targetE"
+              [(ngModel)]="scoreB.targetE"
+              class="form-control me-2"
+              type="number" 
+            >
+            <h6 class="label">Time Penalty</h6>
+            <input 
+              name="timePenalty"
+              [(ngModel)]="scoreB.timePenalty"
+              class="form-control me-2"
+              type="number" 
+            >
+            <button class="btn btn-outline-success save-btn" type="submit">Save Speed Scores</button>
+        </form>
+    </div> -->
+</div>
+

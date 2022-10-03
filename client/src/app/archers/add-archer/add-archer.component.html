@@ -1,0 +1,20 @@
+<div class="col-5">
+    <form #archerForm="ngForm" autocomplete="off" id="archerForm" (ngSubmit)="createArcher(archer)">
+        <h4>Add Archer</h4>
+        <h6 class="label">First Name</h6>
+        <input 
+          name="firstName"
+          [(ngModel)]="archer.firstName"
+          class="form-control me-2" 
+          type="text" 
+        >
+        <h6 class="label">Last Name</h6>
+        <input 
+          name="lastName"
+          [(ngModel)]="archer.lastName"
+          class="form-control me-2" 
+          type="text"  
+        >
+        <button class="btn btn-outline-success save-btn" type="submit">Submit</button>
+    </form>
+</div>
