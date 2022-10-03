@@ -1,1 +1,28 @@
-<p>distance-event works!</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Rank</th>
+            <th scope="col">Name</th>
+            <th scope="col">Total Score</th>
+            <th scope="col">Target 1</th>
+            <th scope="col">Target 2</th>
+            <th scope="col">Target 3</th>
+            <th scope="col">Target 4</th>
+            <th scope="col">Target 5</th>
+            <th scope="col">Target 6</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let score of eventAScores; index as i">
+            <th scope="row">{{i + 1}}</th>
+            <td>{{score.archerName}}</td>
+            <td>{{score.targetA + score.targetB + score.targetC + score.targetD + score.targetE + score.targetF}}</td>
+            <td>{{score.targetA}}</td>
+            <td>{{score.targetB}}</td>
+            <td>{{score.targetC}}</td>
+            <td>{{score.targetD}}</td>
+            <td>{{score.targetE}}</td>
+            <td>{{score.targetF}}</td>
+        </tr>
+    </tbody>
+</table>
